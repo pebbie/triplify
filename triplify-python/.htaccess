@@ -1,0 +1,8 @@
+DirectoryIndex index.py
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME}  !-d
+RewriteCond %{REQUEST_FILENAME}  !-f
+RewriteRule ^(.*)$ index.py?q=$1 [L,QSA]
+RewriteRule .* index.py [L]
+</IfModule>

@@ -1,0 +1,50 @@
+CHANGELOG
+
+V0.8 (04.03.2010)
+ * New Feature: Semantic Pingback - XML-RPC service, X-Pingback header and export of registered pingbacks
+ * Fix: Cache ID is now generated using the server name, port and request URI
+ * Fix: Added a 404 Resource not Found error message
+ * Fix: New config option to disable the use of mod_rewrite (for cases, where the module is available, but not configured)
+ * Fix: Removed hard-coded MySQL settings to allow e.g. PostgreSQL servers (#2899948)
+ * Fix: Duplicate triples in some cases (#2833620)
+ * Fix: 404 when URI with query was requested (e.g. json output, #2631600)
+
+V0.7 (30.10.2009)
+ * New Feature: Calling Triplify from the Command Line / using Triplify as ETL tool
+ * New Feature: Using Regular Expressions for Mapping URLs to RDF
+ * fix: default provenance namespaces corrected
+ * fix: error on two or more tables in a query (#2875711)
+
+
+V0.6 (01.10.2009)
+ * Support for the Provenance Vocabulary (added by Olaf Hartig)
+ * small fix for better postgresql support
+ * small fix for better character encoding
+
+V0.5 (xx-xx-2009)
+ * small fixes
+
+V0.4 (xx-xx-2008)
+ * update log functionality and vocabulary added
+   (see http://triplify.org/vocabulary/update)
+ * linked data publication now also works without Apache's mod_rewrite
+ * Fixed: [1937136] double @@ with language tags
+
+V0.3 (08-04-2008)
+ * added owl:imports statement importing the vocabulary
+ * added rdfs:comment about generator
+ * configuration variable "register" added
+ * Syntax for indicating objectProperties added:
+     SELECT id,user_id 'sioc:has_creator->user'
+ * Configuration variable $triplify['cachedir'] added
+ * proper UTF8 encoding of literals added (thanks to Rolf Strathewerd)
+ * Configuration variable $triplify['license'] added
+ * Configuration variable $triplify['LinkedDataDepth'] added
+ * Configuration variable $triplify['metadata'] added
+ * Configuration variable $triplify['CallbackFunctions'] added
+
+V0.2 (15-03-2008)
+ * many bugfixes and improvements
+
+V0.1 (26-02-2008)
+ * initial public release
